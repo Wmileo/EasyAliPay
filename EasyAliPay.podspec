@@ -13,6 +13,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/Wmileo/EasyAliPay.git", :tag => s.version.to_s }
   s.source_files  = "EasyAliPay/AliPay/*"
-  #s.exclude_files = "Classes/Exclude"
+  s.frameworks   = 'SystemConfiguration'
+  s.exclude_files = "EasyAliPay/AliPay/AliPay/*"
   s.requires_arc = true
+
+
+
 end
