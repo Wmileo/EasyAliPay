@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "EasyAliPay.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    [EasyAliPay appOpenURL:url callBack:^(BOOL success, NSDictionary *result) {
+        NSLog(@"%@",result);
+    }];
+    
     return YES;
 }
 
