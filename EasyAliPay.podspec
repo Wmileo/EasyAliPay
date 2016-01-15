@@ -9,13 +9,13 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/Wmileo/EasyAliPay"
   s.license      = "MIT"
-  s.author             = { "leo" => "work.mileo@gmail.com" }
+  s.author       = { "leo" => "work.mileo@gmail.com" }
 
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/Wmileo/EasyAliPay.git", :tag => s.version.to_s }
+  
   s.source_files  = "EasyAliPay/AliPay/*"
   s.frameworks   = 'SystemConfiguration'
-  s.exclude_files = "EasyAliPay/AliPay/AliPay/*"
   s.requires_arc = true
 
   s.resource = "EasyAliPay/AliPay/*.bundle"
@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |core|
     core.source_files = 'EasyAliPay/AliPay/AliPay/*'
-    core.private_header_files = "EasyAliPay/AliPay/AliPay/openssl/*.h"
-    core.exclude_files = "EasyAliPay/AliPay/AliPay/Util/*"
+    core.public_header_files = 'EasyAliPay/AliPay/AliPay/openssl/*.h'
+    core.exclude_files = 'EasyAliPay/AliPay/AliPay/Util/*.{h,m}'
   end
 
 end
