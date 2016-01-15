@@ -22,7 +22,11 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'EasyAliPay/AliPay/*.{framework}'
 
   s.subspec "Core" do |core|
-    core.source_files = 'EasyAliPay/AliPay/AliPay/*', 'EasyAliPay/AliPay/AliPay/openssl/*.h', 'EasyAliPay/AliPay/AliPay/Util/*.{h,m}'
+    core.source_files = 'EasyAliPay/AliPay/AliPay/*', 'EasyAliPay/AliPay/AliPay/Util/*.{h,m}'
+  end
+
+  s.subspec "OpenSSL" do |ssl|
+    ssl.source_files = 'EasyAliPay/AliPay/AliPay/openssl/*.h'
   end
 
 end
