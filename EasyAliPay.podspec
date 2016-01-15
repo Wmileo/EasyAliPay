@@ -17,6 +17,10 @@ Pod::Spec.new do |s|
   s.exclude_files = "EasyAliPay/AliPay/AliPay/*"
   s.requires_arc = true
 
+  s.public_header_files = '**/*.h'
+  s.resource = "EasyAliPay/AliPay/*.bundle"
+  s.vendored_frameworks = 'EasyAliPay/AliPay/*.{framework}'
+  s.vendored_libraries = 'EasyAliPay/AliPay/AliPay/*.{a}'
 
 
 end
