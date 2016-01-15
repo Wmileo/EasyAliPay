@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "leo" => "work.mileo@gmail.com" }
 
-  s.platform     = :ios, "5.0"
+  s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/Wmileo/EasyAliPay.git", :tag => s.version.to_s }
 
   s.source_files  = "EasyAliPay/AliPay/*"
