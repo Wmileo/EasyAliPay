@@ -4,6 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "简单封装ali支付"
   s.description  = <<-DESC
 					 简单封装ali支付
+           支付宝(中国)网络技术有限公司
                    DESC
 
   s.homepage     = "https://github.com/Wmileo/EasyAliPay"
@@ -20,7 +21,10 @@ Pod::Spec.new do |s|
   s.public_header_files = '**/*.h'
   s.resource = "EasyAliPay/AliPay/*.bundle"
   s.vendored_frameworks = 'EasyAliPay/AliPay/*.{framework}'
-  s.vendored_libraries = 'EasyAliPay/AliPay/AliPay/*.{a}'
+  s.vendored_libraries = 'EasyAliPay/AliPay/AliPay/*.a'
 
+  s.subspec "Core" do |core|
+    core.source_files = 'EasyAliPay/AliPay/AliPay/*'
+  end
 
 end
